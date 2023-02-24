@@ -1,11 +1,11 @@
 /* Spec: https://docs.google.com/document/d/1_iqjy58Whs5xwbL5NkcqaIY_khW6Mji09rnx-SsRm-g/edit?usp=sharing */
-/* #logo{
+#logo{
     animation: logo-grow 5s;
 }
 @keyframes logo-grow{
     from{width: 25px; opacity: 0;}
     to{width: 475px;opacity: 1;}
-} */
+}
 /* Step 2*/
 body{
     font-family: 'Poppins', serif;
