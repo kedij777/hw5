@@ -83,10 +83,6 @@ header{
         flex-direction:row;
         justify-content: center;
     }
-    .card header{
-        align-items: center;
-        justify-content: center;
-    }
 
     body>header{
         position:sticky;
@@ -129,8 +125,10 @@ header{
         align-items: last-baseline;
         flex-direction: row;
     }
-
-    .gallery, #gallery{
+    #gallery{
+        visibility: hidden;
+    }
+    .gallery{
         display: none;
     }
     .card > ul li:nth-child(2)::after{
