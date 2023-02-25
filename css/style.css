@@ -1,4 +1,6 @@
 /* Spec: https://docs.google.com/document/d/1_iqjy58Whs5xwbL5NkcqaIY_khW6Mji09rnx-SsRm-g/edit?usp=sharing */
+
+/* default view */
 #logo{
     animation: logo-grow 5s;
 }
@@ -25,11 +27,11 @@ header{
     display: flex;
     flex-direction: column;
 }
-/* 5 */
+/* 5 - challenge: Style the links so that they have the same color even after they have been visited. */
 .nav_item:visited{
     color:inherit;
 }
-
+/*  style ONLY those header elements that are direct children of a card class */
 .card>header{
     background: #288088;
     border: solid 2px #45ADAD;
@@ -40,6 +42,7 @@ header{
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
+/* handle card first, because it's the child class */
 .card{
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -47,7 +50,7 @@ header{
     flex-direction: column;
     width: 450px;
 }
-
+/* cards should be centered both horizontally and vertically in the pricing class */
 .pricing{
     display:flex;
     align-items: center;
@@ -67,13 +70,14 @@ header{
 }
 
 
- /* screen-size is greater than 900px */
+ /* screen-size is greater than 900px, step 11 - 13*/
  @media screen and (min-width:900px) {
     header, .nav_links{
         display:flex;
         flex-direction: row;
         justify-content: space-between;
     }
+    /* header of card/pricing shouldn't be centered */
     .card{
         flex-direction: column;
         width: 275px;
@@ -89,13 +93,13 @@ header{
         top: 0px;
     }
  }
-
+/* accessibility - reduced motion */
  @media (prefers-reduced-motion) {
     #logo{
         animation: none;
     }
   }
-
+/* print mode step 15-21 */
   @media print {
     body{
         font-family: Arial, Helvetica;
@@ -126,11 +130,14 @@ header{
         flex-direction: row;
     }
     #gallery{
+        /* hide content but remain space */
         visibility: hidden;
     }
     .gallery{
+        /* hide content and hide space */
         display: none;
     }
+    /* add emoji the the first line of card list */
     .card > ul li:nth-child(2)::after{
         content: '\1F44D';
     }
